@@ -13,3 +13,15 @@ docker images -q --filter dangling=true | xargs docker rmi
 
 Eliminar todos los contenedores creados despues de un contenedor en específico
 docker ps --since a1bz3768ez7g -q | xargs docker rm
+
+Mostra os containers em execução:
+`docker container ls` 
+
+Mostra todos os containers, em execução, mortos, parados:
+`docker container ls -a`
+
+Parar container:
+`docker container stop angry_babbage`
+
+Mostra o uso de recursos consumidos pelo container:
+`docker container stats 18a58c41ebd1`
